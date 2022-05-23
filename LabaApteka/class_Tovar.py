@@ -1,11 +1,10 @@
 # -*- coding: cp1251 -*-
 class Tovar(object):
     registry=[]
-    def __init__(self,name,desc,apteka,price):
+    def __init__(self,name,desc,price):
         self.registry.append(self)
         self.name=name
         self.desc=desc
-        self.apteka=apteka
         self.price=price
 
     def serch(serch_line):
@@ -17,11 +16,11 @@ class Tovar(object):
                 print("Найден товар")
                 print("Название:"+tovar.name)
                 print("Описание:"+tovar.desc)
-                print("Описание:"+str(tovar.price)+"Р")
+                print("Описание:"+str(tovar.price)+"Руб.")
                 print("")
                 tovar_need=tovar_need+[tovar]
         if tovar_need==[]:
-            print("Товары не найдены")
+            print("Товары не найдены!!!")
         return tovar_need
 
 
