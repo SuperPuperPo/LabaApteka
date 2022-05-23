@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>df2445e2-fa1f-44cf-8fa6-bf38cfc1f192</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>LabaApteka.py</StartupFile>
+    <StartupFile>GUI.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -27,6 +27,7 @@
     <Compile Include="class_Person.py" />
     <Compile Include="class_Order.py" />
     <Compile Include="CreateDoc.py" />
+    <Compile Include="GUI.py" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
