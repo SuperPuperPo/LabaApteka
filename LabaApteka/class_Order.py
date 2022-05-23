@@ -1,6 +1,14 @@
 # -*- coding: cp1251 -*-
 class Order(object):
+        """Класс Заказ."""
         def __init__(self,basket):
+            """
+            Конструктор на вход подается корзина с товарами.
+            
+            Аргументы:
+
+            'tovar' : Объект класса **Basket**
+            """
             total_price=0
             self.tovars=[]
             self.tovars_count=[]
@@ -17,4 +25,11 @@ class Order(object):
                 print("Корзина пуста!")
 
         def add_status(self,status):
-            self.ststus=ststus
+            """
+            Метод для присваивания статуса.
+            
+            Аргументы:
+
+            'status' : **Строка** с необходимым статусом
+            """
+            self.ststus=status

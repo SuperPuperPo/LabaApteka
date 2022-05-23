@@ -26,6 +26,7 @@
     <Compile Include="class_Basket.py" />
     <Compile Include="class_Person.py" />
     <Compile Include="class_Order.py" />
+    <Compile Include="CreateDoc.py" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
