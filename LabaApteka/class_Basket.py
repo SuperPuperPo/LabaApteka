@@ -50,7 +50,7 @@ class Basket(object):
 
         'tovar' : Объект класса **Tovar**
         """
-        for i in range(0,len(tovars)):
+        for i in range(0,len(self.tovars)):
             if tovar==self.tovars[i]:
                 self.tovars.pop(i)
                 self.tovars_count.pop(i)
@@ -67,16 +67,16 @@ class Basket(object):
         'need_count' : **Число** с необходимым количеством товара
         """
      
-        if need_count<=0:
-            for i in range(0,len(tovars)):
+        if int(need_count)<=0:
+            for i in range(0,len(self.tovars)):
                 if tovar==self.tovars[i]:
                     self.tovars.pop(i)
                     self.tovars_count.pop(i)
                     break
         else:
-            for i in range(0,len(tovars)):
+            for i in range(0,len(self.tovars)):
                 if tovar==self.tovars[i]:
-                    self.tovars_count[i]=need_count
+                    self.tovars_count[i]=int(need_count)
                     break
 
     def clear_basket(self):

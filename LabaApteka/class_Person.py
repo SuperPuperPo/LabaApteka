@@ -17,7 +17,7 @@ class Person(object):
         Конструктор создает пустого покупателя.
         """
         self.name=""
-        self.phnoe_number=""
+        self.phone_number=""
         self.order=[]
 
     def add_order(self,order):
@@ -30,7 +30,7 @@ class Person(object):
         """
         self.order=self.order+[order]
 
-    def add_phnoe_number(self,phone_number):
+    def add_phone_number(self,phone_number):
         """
         Метод для добавления номера телефона.
         
@@ -38,7 +38,7 @@ class Person(object):
 
         'phone_number' : **Число** с номером телефона пользователя        
         """
-        self.phnoe_number=phone_number
+        self.phone_number=phone_number
 
     def add_Name(self,name):
         """
