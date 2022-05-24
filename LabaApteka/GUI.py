@@ -7,6 +7,14 @@ from class_Person import Person
 from class_Order import Order
 
 def button_tovar_delete(tovar):
+    """
+    ‘ункци€ удал€юща€ выбранный товар и обновл€юща€ окно.
+
+    јтрибуты:
+
+    'tovar' : ќбъект класса **Tovar**
+
+    """
     basket.delete_tovar(tovar)
     create_basket()
 
@@ -50,11 +58,6 @@ def add_person_info(name,number):
     print(person.name)
     person.add_phone_number(number)
     print(person.phone_number)
-
-
-
-
-
 
 def create_serch():
     serch_string=entry.get()
