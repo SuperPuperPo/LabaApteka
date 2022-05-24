@@ -33,6 +33,7 @@ class Tovar(object):
         self.desc=desc
         self.price=price
 
+
     def serch(serch_line):
         """Метод для нахождения товаров по строке в описании или имени.
         
