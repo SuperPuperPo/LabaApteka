@@ -40,7 +40,7 @@ class Person(object):
         """
         self.phone_number=phone_number
 
-    def add_Name(self,name):
+    def add_name(self,name):
         """
         Метод для добваления имени покупателя.
         
