@@ -19,5 +19,6 @@ tovar1.desc
 
 order=Order(basket)
 print(order.price)
+print(int("5"))
 
 
