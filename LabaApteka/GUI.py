@@ -216,12 +216,7 @@ def add_tovar_in_main_frame(tovar,i):
     Button_add=tk.Button(master=tovar_frame,text="+",command=lambda:basket.add_tovar(tovar))
     Button_add.pack()
 
-
-
-
-        
-
-        
+   
 
 person=Person()
 basket=Basket()
@@ -231,6 +226,7 @@ tovar3=Tovar("Йод","В карандаше",134)
 tovar4=Tovar("Зелёнка","В баночке",37)
 tovar5=Tovar("Аскорбиновая кислота","Аскорбинка",29)
 tovar6=Tovar("ТераФлю","пачка 10 шт., лимон",350)
+tovar7=Tovar("Гематогоген","Без ёжика(",19)
 
 window = tk.Tk()
 
