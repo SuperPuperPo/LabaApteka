@@ -216,7 +216,8 @@ def add_tovar_in_main_frame(tovar,i):
     Button_add=tk.Button(master=tovar_frame,text="+",command=lambda:basket.add_tovar(tovar))
     Button_add.pack()
 
-   
+
+    
 
 person=Person()
 basket=Basket()
@@ -240,7 +241,7 @@ window.rowconfigure(2, weight=1, minsize=700)
 
 frame=tk.Frame(master=window)
 frame.grid(row=0,column=1)
-label = tk.Label(master=frame,text="¿ÔÚÂÍ‡ 24")
+label = tk.Label(master=frame,text="¿œ“≈ ¿ 24")
 label.pack()
 
 frame=tk.Frame(master=window)

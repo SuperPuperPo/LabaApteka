@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>df2445e2-fa1f-44cf-8fa6-bf38cfc1f192</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>GUI.py</StartupFile>
+    <StartupFile>LabaApteka.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
