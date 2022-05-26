@@ -1,0 +1,8 @@
+============================= test session starts =============================
+platform win32 -- Python 3.9.1, pytest-7.1.2, pluggy-1.0.0
+rootdir: C:\Users\Danil\source\repos\LabaApteka\LabaApteka
+collected 10 items
+
+test_all.py ..........                                                   [100%]
+
+============================= 10 passed in 0.05s ==============================

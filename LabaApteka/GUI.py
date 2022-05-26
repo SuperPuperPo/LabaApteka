@@ -70,7 +70,7 @@ def add_person_info(name,number):
     """
     ‘ункци€ измен€юща€ информацию о пользователе.
 
-    јтрибуты:
+    јргументы:
 
     'name' : **строка** с именем покупател€
 
@@ -187,6 +187,17 @@ def create_basket():
         labael_name.pack()
 
 def add_basket_in_main_frame(tovar,count,i):
+    """
+    ‘ункци€ создающа€ и добавл€юща€ рамку с товаром корзины на основную рамку.
+    
+    јргументы:
+
+    'tovar' : ќбъект класса **Tovar**
+
+    'count' : **„исло** с количеством товара
+
+    'i': **„исло** номер строки товара
+    """
     tovar_frame=tk.Frame(master=main_frame)
     tovar_frame.grid(row=i,column=0,padx=5, pady=5, sticky="w")
     labael_name=tk.Label(master=tovar_frame,text=tovar.name,justify="left")
@@ -227,7 +238,13 @@ def add_basket_in_main_frame(tovar,count,i):
 
 def add_tovar_in_main_frame(tovar,i):
     """
-    ‘ункци€ создающа€ и добавл€юща€ рамку с товаром на основеую рамку.
+    ‘ункци€ создающа€ и добавл€юща€ рамку с товаром на основную рамку.
+        
+    јргументы:
+
+    'tovar' : ќбъект класса **Tovar**
+
+    'i': **„исло** номер строки товара
 
     """
     tovar_frame=tk.Frame(master=main_frame)
