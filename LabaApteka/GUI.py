@@ -4,7 +4,6 @@ from tkinter.tix import TEXT
 from class_Tovar import Tovar
 from class_Basket import Basket
 from class_Person import Person
-from class_Order import Order
 
 def button_tovar_delete(tovar):
     """
@@ -19,10 +18,24 @@ def button_tovar_delete(tovar):
     create_basket()
 
 def button_tovar_count_change(tovar,entry_count):
+    """
+    Функция изменяющая количество товара и обновляющая окно.
+
+    Атрибуты:
+
+    'tovar' : Объект класса **Tovar**
+
+    'entry_count' : **Число** с необходимым количеством товара
+
+    """
     basket.change_tovar_count(tovar,entry_count)
     create_basket()
 
 def create_person():
+    """
+    Функция создания окна с профилем поукпателя.
+
+    """
     for widget in main_frame.winfo_children():
         widget.destroy()
     
@@ -54,12 +67,26 @@ def create_person():
     button_add.pack()
 
 def add_person_info(name,number):
-    person.add_Name(name)
+    """
+    Функция изменяющая информацию о пользователе.
+
+    Аргументы:
+
+    'name' : **строка** с именем покупателя
+
+    'number' : **строка** с номером телефона
+
+    """
+    person.add_name(name)
     print(person.name)
     person.add_phone_number(number)
     print(person.phone_number)
 
 def create_serch():
+    """
+    Функция создания окна с результатом поиска.
+
+    """
     serch_string=entry.get()
     tovar_list=Tovar.serch(serch_string)
     for widget in main_frame.winfo_children():
@@ -94,6 +121,10 @@ def create_serch():
         labael_name.pack()
 
 def create_basket():
+    """
+    Функция создания окна корзины.
+
+    """
     tovar_list=basket.tovars
     tovar_count=basket.tovars_count
     summa=0
@@ -156,6 +187,17 @@ def create_basket():
         labael_name.pack()
 
 def add_basket_in_main_frame(tovar,count,i):
+    """
+    Функция создающая и добавляющая рамку с товаром корзины на основную рамку.
+    
+    Аргументы:
+
+    'tovar' : Объект класса **Tovar**
+
+    'count' : **Число** с количеством товара
+
+    'i': **Число** номер строки товара
+    """
     tovar_frame=tk.Frame(master=main_frame)
     tovar_frame.grid(row=i,column=0,padx=5, pady=5, sticky="w")
     labael_name=tk.Label(master=tovar_frame,text=tovar.name,justify="left")
@@ -184,7 +226,7 @@ def add_basket_in_main_frame(tovar,count,i):
     
     tovar_frame=tk.Frame(master=main_frame)
     tovar_frame.grid(row=i,column=5,padx=5, pady=5)
-    Button_add=tk.Button(master=tovar_frame,text="+",command=lambda:button_tovar_count_change(tovar,entry_count.get()))
+    Button_add=tk.Button(master=tovar_frame,text="+",command=lambda:button_tovar_count_change(tovar,int(entry_count.get())))
     Button_add.pack()
 
     tovar_frame=tk.Frame(master=main_frame)
@@ -195,7 +237,16 @@ def add_basket_in_main_frame(tovar,count,i):
     
 
 def add_tovar_in_main_frame(tovar,i):
-    
+    """
+    Функция создающая и добавляющая рамку с товаром на основную рамку.
+        
+    Аргументы:
+
+    'tovar' : Объект класса **Tovar**
+
+    'i': **Число** номер строки товара
+
+    """
     tovar_frame=tk.Frame(master=main_frame)
     tovar_frame.grid(row=i,column=0,padx=10, pady=5, sticky="w")
     labael_name=tk.Label(master=tovar_frame,text=tovar.name)
@@ -215,9 +266,6 @@ def add_tovar_in_main_frame(tovar,i):
     tovar_frame.grid(row=i,column=3,padx=10, pady=5)
     Button_add=tk.Button(master=tovar_frame,text="+",command=lambda:basket.add_tovar(tovar))
     Button_add.pack()
-
-
-    
 
 person=Person()
 basket=Basket()
