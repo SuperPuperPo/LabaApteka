@@ -5,7 +5,7 @@ COPY ./ /app
 # Устанавливаем все зависимости
 RUN apk update && python -m pip install --upgrade pip && python -m pip install flake8 pytest
 # Устанавливаем приложение (Подробнее смотри Distutils)
-RUN pip install -e /app
+CMD python /app/src/app.py
 # Говорим контейнеру какой порт слушай
 EXPOSE 8080
 # Запуск нашего приложения при старте контейнера
