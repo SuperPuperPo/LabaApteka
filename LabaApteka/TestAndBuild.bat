@@ -8,5 +8,5 @@ pytest test_all.py>TestLog.txt
 findstr "FAILURES"  TestLog.txt>pupa.txt
 set /p pupa=< pupa.txt
 del pupa.txt
-if defined pupa (echo %emptyrow% & echo %emptyrow% & echo %bad%) else (@pyinstaller --noconfirm class_Tovar.py & echo %emptyrow% & echo %emptyrow% & echo %good%)
+if defined pupa (echo %emptyrow% & echo %emptyrow% & echo %bad%) else (@pyinstaller --noconfirm GUI.py & echo %emptyrow% & echo %emptyrow% & echo %good%)
 pause
