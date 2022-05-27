@@ -83,7 +83,7 @@ def test_person_addname():
     person=Person()
     person.add_name("Петя")
     x=person.name
-    assert x=="Пет"
+    assert x=="Петя"
 
 def test_person_addphone():
     person=Person()
