@@ -14,7 +14,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: Package Application
+    - name: Package Windows
       uses: JackMcKew/pyinstaller-action-windows@main
       with:
         path: LabaApteka
