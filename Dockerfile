@@ -3,7 +3,7 @@ FROM python:3.8-alpine
 # Копируем все файлы из текущей директории в /app контейнера
 COPY ./ /app
 # Устанавливаем все зависимости
-RUN apk update && pip install -r /app/requirements.txt --no-cache-dir
+RUN apk update && python -m pip install --upgrade pip && python -m pip install flake8 pytest
 # Устанавливаем приложение (Подробнее смотри Distutils)
 RUN pip install -e /app
 # Говорим контейнеру какой порт слушай
