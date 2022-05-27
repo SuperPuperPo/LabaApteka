@@ -3,7 +3,7 @@ FROM python:3.8-alpine
 # Копируем все файлы из текущей директории в /app контейнера
 COPY ./ /app
 # Устанавливаем все зависимости
-RUN apk update &&-m pip install --upgrade pip && pip install -r /app/request.txt --no-cache-dir
+RUN apk update && pip install --upgrade pip && pip install -r /app/request.txt --no-cache-dir
 # Устанавливаем приложение (Подробнее смотри Distutils)
 CMD python /app/src/app.py
 # Говорим контейнеру какой порт слушай
