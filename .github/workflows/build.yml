@@ -16,9 +16,9 @@ jobs:
     - name: PyInstaller Windows
       uses: JackMcKew/pyinstaller-action-windows@main
       with:
-        path: labaapteka
+        path: LabaApteka
 
     - uses: actions/upload-artifact@v2
       with:
         name: my-exe
-        path: labaapteka/dist/windows # or path/to/artifact
+        path: LabaApteka/dist/windows # or path/to/artifact
